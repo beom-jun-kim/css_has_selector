@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .path li:not(.displaynone):has(+ li.displaynone) a {
+        color: red;
+      }
+      .path li:not(.displaynone) + li.displaynone a {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="path">
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li class="displaynone"><a href="#">6</a></li>
+    </ul>
+
+    <ul class="path">
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li class="displaynone"><a href="#">4</a></li>
+      <li class="displaynone"><a href="#">5</a></li>
+      <li class="displaynone"><a href="#">6</a></li>
+    </ul>
+  </body>
+</html>
