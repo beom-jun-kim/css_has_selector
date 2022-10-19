@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <style>
-      .path li:not(.displaynone):has(+ li.displaynone) a {
+      a {
+        color: inherit;
+        font-size: 30px;
+        text-decoration: none;
+      }
+
+      /* 
+        1.바로 뒤에  li.displaynone를 가진 아이(그냥 li) 
+        2.li.displaynone가 아닌 요소들 => 두가지의 조건을 충족하는 요소
+      */
+      .path li:not(li.displaynone):has(+ li.displaynone) a {
         color: red;
       }
+
+      /* 
+        1.li.displaynone가 아닌 요소 +
+        2.바로 뒤에 li.displaynone인 애들 => 두가지의 조건을 충족하는 요소 
+      */
       .path li:not(.displaynone) + li.displaynone a {
         color: orange;
       }
